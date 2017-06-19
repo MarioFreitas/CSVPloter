@@ -16,12 +16,12 @@ cwd = os.getcwd().replace('\\', '/')
 script = 'main.py'
 base = 'Win32GUI'  # Win32GUI para gui's e None para console
 icon = './img/icon.ico'
-targetName = 'MyProject.exe'
+targetName = 'CSV Plotter.exe'
 
 # setup options
-name = 'MyProject'
-version = '0.1'
-description = 'MyProject'
+name = 'CSV Plotter'
+version = '1.0'
+description = 'CSV Plotter'
 
 # build options
 build_directory = 'C:{}/{} Builds/build - {}.{:02d}.{:02d}/build-exe.win32-3.6/'.format(desktop, name, year, month, day)
@@ -40,17 +40,17 @@ zip_include_packages = ['asncio', 'ctypes', 'collections', 'curses', 'dateutil',
                         'markupsafe', 'mistune', 'multiprocessing', 'nbconvert', 'nbformat', 'nose', 'notebook',
                         'pkg_resources', 'platforms', 'prompt_toolkit', 'pydoc_data', 'pygments', 'setuptools',
                         'sqlite3', 'test', 'testpath', 'tornado', 'traitlets', 'wcwidth', 'xml', 'xmlrpc', 'PIL',
-                        ]
+                        'CSVPloter']
 silent = True
 optimize = 2
 
 # shortcut options
-shortcut_name = 'MyProject'
+shortcut_name = 'CSV Plotter'
 
 # bdist_msi options
 company_name = 'Mario Raul Freitas'
-product_name = 'MyProject'
-upgrade_code = '{63320F3A-DC5F-11E2-D341-1132HK39B01E}'
+product_name = 'CSV Plotter'
+upgrade_code = '{63320F3A-DC5F-11E2-D341-1132AF39B01E}'
 add_to_path = False
 install_directory = 'C:{}/{} Builds/build - {}.{:02d}.{:02d}/msi-exe.win32-3.6'.format(desktop, name, year, month, day)
 
@@ -96,7 +96,7 @@ opt = {
                   'include_files': include_files,
                   'excludes': excludes,
                   'zip_include_packages': zip_include_packages,
-                  'build_exe': build_directory,
+                  # 'build_exe': build_directory,
                   'silent': silent,
                   'optimize': optimize
                   },
@@ -106,7 +106,7 @@ opt = {
                   'data': msi_data
                   },
     'install_exe': {
-        'build_dir': build_directory,
+        # 'build_dir': build_directory,
         'skip_build': True
     }
 }

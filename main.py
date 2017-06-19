@@ -23,7 +23,7 @@ class MainWindow(QMainWindow, Ui_MainWindow):
 
         # Setup GUI
         self.setupUi(self)
-        self.setWindowIcon(QIcon('./img/icon.png'))
+        self.setWindowIcon(QIcon('./img/icon.ico'))
         self.setGeometry(100, 100, 400, 400)
         self.statusBar()
         self.change_qss('actionDarkBlue')
